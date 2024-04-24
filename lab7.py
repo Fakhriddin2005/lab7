@@ -30,10 +30,10 @@
 # t2()
 
 def t3():
- from PIL import Image
- c = "1.jpg"
- with Image.open(c) as img:
-  img.load()
-  img.show()
-
+ from PIL import Image, ImageFilter
+ for i in range(1, 6):
+        i = str(i)
+        img = Image.open(i + '.jpg')
+        img = img.filter(ImageFilter.EMBOSS)
+        # img.save("D:\питон\pics\img" + i + ".jpg")
  t3()
